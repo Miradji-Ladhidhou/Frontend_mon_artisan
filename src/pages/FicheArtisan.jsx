@@ -15,6 +15,9 @@ function FicheArtisan() {
     const fetchArtisan = async () => {
       try {
         const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/artisans/${id}`);
+        setTimeout(() => {
+          setArtisan(response.data);
+          }, 1500);
         setArtisan(response.data);
       } catch (err) {
         console.error('Erreur lors de la récupération de l’artisan :', err);
