@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
-import image from '../image/artisan.jpg';
 import { Helmet } from 'react-helmet-async';
 
 // Composant pour afficher la fiche d'un artisan
@@ -48,7 +47,7 @@ function FicheArtisan() {
         <meta name="description" content="Découvrez le profil détaillé de nos artisans" />
       </Helmet>
       <h2>{artisan.nom}</h2>
-      <img src={image} alt={artisan.nom} className="artisan-photo" />
+      <img src="../../public/Logo.png" alt={artisan.nom} className="artisan-photo" />
       <p className="stars">{renderStars(artisan.note || 0)}</p>
       <p><strong>Spécialité :</strong> {artisan.specialite?.nom}</p>
       <p><strong>Localisation :</strong> {artisan.ville}</p>
