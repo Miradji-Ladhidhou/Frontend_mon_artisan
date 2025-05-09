@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
-import logo from '../image/Logo.png';
+import logo from '../../public/Logo.png';
 import { Helmet } from 'react-helmet-async';
 
 // Composant pour afficher la fiche d'un artisan
@@ -36,7 +36,7 @@ function FicheArtisan() {
   };
   
   // Affiche un message de chargement pendant la requête
-  if (!artisan) return <p>Chargement...</p>;
+  if (!artisan) return <p style={{ color: 'red', fontSize: '24px' }}>Chargement...</p>;
 
   // Affichage des informations de l'artisan et formulaire de contact
   return (
