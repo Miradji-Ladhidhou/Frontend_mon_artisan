@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
-import logo from '../image/Logo.png';
+import image from '../image/artisan.jpg';
 import { Helmet } from 'react-helmet-async';
 
 // Composant pour afficher la fiche d'un artisan
@@ -15,9 +15,6 @@ function FicheArtisan() {
     const fetchArtisan = async () => {
       try {
         const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/artisans/${id}`);
-        setTimeout(() => {
-          setArtisan(response.data);
-          }, 1500);
         setArtisan(response.data);
       } catch (err) {
         console.error('Erreur lors de la récupération de l’artisan :', err);
@@ -51,7 +48,7 @@ function FicheArtisan() {
         <meta name="description" content="Découvrez le profil détaillé de nos artisans" />
       </Helmet>
       <h2>{artisan.nom}</h2>
-      <img src={logo} alt={artisan.nom} className="artisan-photo" />
+      <img src={image} alt={artisan.nom} className="artisan-photo" />
       <p className="stars">{renderStars(artisan.note || 0)}</p>
       <p><strong>Spécialité :</strong> {artisan.specialite?.nom}</p>
       <p><strong>Localisation :</strong> {artisan.ville}</p>
