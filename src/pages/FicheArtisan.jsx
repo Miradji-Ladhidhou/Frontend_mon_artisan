@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
-import logo from '../../public/Logo.png';
+import logo from '../image/Logo.png';
 import { Helmet } from 'react-helmet-async';
 
 // Composant pour afficher la fiche d'un artisan
