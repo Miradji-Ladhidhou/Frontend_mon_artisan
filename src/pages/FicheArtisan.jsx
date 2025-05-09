@@ -47,7 +47,7 @@ function FicheArtisan() {
         <meta name="description" content="Découvrez le profil détaillé de nos artisans" />
       </Helmet>
       <h2>{artisan.nom}</h2>
-      <img src="../../public/Logo.png" alt={artisan.nom} className="artisan-photo" />
+      <img src="/Logo.png" alt={artisan.nom} className="artisan-photo" />
       <p className="stars">{renderStars(artisan.note || 0)}</p>
       <p><strong>Spécialité :</strong> {artisan.specialite?.nom}</p>
       <p><strong>Localisation :</strong> {artisan.ville}</p>
