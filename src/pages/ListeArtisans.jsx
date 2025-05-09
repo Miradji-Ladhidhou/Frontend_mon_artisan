@@ -40,7 +40,7 @@ function ListeArtisans() {
   useEffect(() => {
     const fetchArtisans = async () => {
       try {
-        let url = 'http://localhost:3001/api/artisans';
+        let url = (`${process.env.REACT_APP_API_URL}/api/artisans`);
 
         // Modifie l'URL en fonction des paramètres de recherche
         if (nom) {
