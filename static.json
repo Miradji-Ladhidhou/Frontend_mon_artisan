@@ -3,7 +3,7 @@
       {
         "src": "/(.*)",
         "status": 200,
-        "dest": "/index.html"
+        "dest": "./public/index.html"
       }
     ]
   }
