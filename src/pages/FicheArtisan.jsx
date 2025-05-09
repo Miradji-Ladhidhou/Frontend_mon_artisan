@@ -36,6 +36,7 @@ function FicheArtisan() {
   };
   
   // Affiche un message de chargement pendant la requête
+  console.log('artisan', artisan);
   if (!artisan) return <p style={{ color: 'red', fontSize: '24px' }}>Chargement...</p>;
 
   // Affichage des informations de l'artisan et formulaire de contact
